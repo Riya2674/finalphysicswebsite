@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+}
+
+/* Header/Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(29, 53, 87, 0.9);
+    padding: 15px 30px;
+    position: relative;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    color: #25D366;
+}
+
+
+
+/* Glimpses Gallery */
+.glimpses-gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.glimpses-gallery h1 {
+    font-size: 2.8rem;
+    color: #1d3557;
+    margin-bottom: 20px;
+}
+
+.glimpses-gallery p {
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image-card p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(29, 53, 87, 0.9);
+    color: white;
+    margin-top: auto; /* Pushes footer to the bottom if content is short */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* This ensures it's not shown on larger screens */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white; /* Ensures the icon is visible */
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none; /* Removes any background */
+        border: none;
+    }
+
+    header {
+        background: rgba(29, 53, 87, 0.7);
+        padding: 10px 20px;
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Styling the hamburger icon */
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin: 6px auto;
+        background-color: white; /* Ensures bars are white */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(29, 53, 87, 0.5);
+        position: absolute;
+        top: 74px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+
+    .logo img {
+        height: 50px;
+    }
+    .gallery {
+        grid-template-columns: 1fr; /* 1 per row on small screens */
+      }
+      
+    .glimpses-gallery img {
+          width: 100%; /* Full width */
+    }
+      
+    footer {
+        background: rgba(29, 53, 87, 0.7);
+    }
+}
