@@ -7,6 +7,7 @@
   body {
     font-family: 'Poppins', sans-serif;
     background-color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('home.jpg') center/cover no-repeat;
 
   }
   
@@ -57,7 +58,7 @@
     height: 85vh;
     text-align: center;
     padding: 20px;
-    color: #457b9d;
+    color: white;
    
 }
 
@@ -72,7 +73,7 @@
         margin-bottom: 20px;  
 }
 .hero h1{
-    color:#e63946;
+    color:red;
     font-size: 2.8rem;
     
 }
@@ -104,6 +105,26 @@
   .hamburger {
     display: none; /* This ensures it's not shown on larger screens */
 }
+.about-sir {
+  padding: 40px 20px;
+  
+  text-align: center;
+}
+
+.about-sir h2 {
+  font-size: 2rem;
+  color:red;
+  margin-bottom: 15px;
+}
+
+.about-sir p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  line-height: 1.6;
+}
+
   
   /* Responsive Styles */
   @media (max-width: 768px) {
